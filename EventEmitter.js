@@ -1,3 +1,4 @@
+// Event 'done' changed to 'completed'
 // Intial file contents with comments
 var EventEmitter = require('events').EventEmitter;
 
@@ -9,7 +10,7 @@ var getResource = function(c) {
         var t = setInterval(function() {
             e.emit('data', count++);
             if (count == c) {
-                e.emit('done', count);
+                e.emit('completed', count);
                 clearInterval(t);
             }
         }, 10);
@@ -28,6 +29,6 @@ r.on('data', function(data) {
     console.log('    Received data ==> ' + data);
 });
         
-r.on('done', function(totalCount) {
+r.on('completed', function(totalCount) {
     console.log('Done after ' + totalCount + ' events!');
 });
