@@ -1,3 +1,4 @@
+//Change message on SIGTERM event
 process.stdin.resume();
 process.stdin.setEncoding('utf8');
 
@@ -10,7 +11,7 @@ process.stdin.on('end', function() {
 });
 
 process.on('SIGTERM', function() {
-    process.stderr.write('Terminating???');
+    process.stderr.write('Got a SIGTERM - About to terminate???');
 });
 
 console.log('Node is running as id: ' + process.pid);
