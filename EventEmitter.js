@@ -1,4 +1,4 @@
-// Data + Events - Changed to 500
+// Data + Events - Changed to 100
 // Intial file contents with comments
 var EventEmitter = require('events').EventEmitter;
 
@@ -19,7 +19,7 @@ var getResource = function(c) {
     return (e);
 };
 
-var r = getResource(500);
+var r = getResource(100);
 
 r.on('start', function() {
     console.log('Event Emitter started');
@@ -30,5 +30,5 @@ r.on('data', function(data) {
 });
         
 r.on('done', function(totalCount) {
-        console.log('Done after ' + totalCount + ' events!');
+    console.log('Done after ' + totalCount + ' events!');
 });
