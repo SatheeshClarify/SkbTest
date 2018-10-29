@@ -1,3 +1,4 @@
+// Intial file contents with comments
 var EventEmitter = require('events').EventEmitter;
 
 var getResource = function(c) {
