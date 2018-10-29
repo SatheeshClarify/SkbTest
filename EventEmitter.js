@@ -1,3 +1,4 @@
+// Again change Data + Events to 300
 // Data + Events - Changed to 100
 // Intial file contents with comments
 var EventEmitter = require('events').EventEmitter;
@@ -19,7 +20,7 @@ var getResource = function(c) {
     return (e);
 };
 
-var r = getResource(100);
+var r = getResource(300);
 
 r.on('start', function() {
     console.log('Event Emitter started');
